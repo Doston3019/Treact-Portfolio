@@ -277,36 +277,25 @@ input:hover {
 .services {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    align-items: center;
-    padding-top: 50px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: flex;
-    height: 100%;
-    padding: 2rem 0.5rem;
-    text-align: center;
 }
 
 .img__column {
-    padding-top: 20px;
     display: flex;
     width: calc(100% / 3);
 }
 
 .img__container {
+    content: 24*24;
     flex-shrink: 0;
     border-radius: 9999px;
     border-width: 1px;
     padding: 1.25rem;
     text-align: center;
-
 }
 
-.text__container {
-    box-sizing: border-box;
-    margin-left: 1rem;
-    margin-top: 0.5rem;
+.service__description {
+    display: flex;
+    flex-direction: column;
 }
 
 .text__title {
@@ -322,7 +311,7 @@ input:hover {
 .text__description {
     display: flex;
     flex-direction: column;
-    margin: 16px 0px 0px;
+    margin-top: 16px;
     font-weight: 500;
     line-height: 2;
     --tw-text-opacity: 1;
@@ -676,6 +665,26 @@ button {
 .plan:first-child{
     margin-right: 0;
 }
+
+.plan__highlight,
+.plan__highlight--second {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.plan__highlight {
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217)100%);
+}
+
+.plan__highlight--second {
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178)1000%) !important;
+}
+
 .plan {
     position: relative;
     display: flex;
